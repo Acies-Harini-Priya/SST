@@ -4,11 +4,6 @@ tables:
     description: Table containing information about vw_contract_location_daily.
     public: true
 
-    # joins:
-    #   - name: user_location
-    #     relationship: many_to_one
-    #     sql: "{TABLE.location_id} = {user_location.location_id}"
-
     dimensions:
       - name: CONTRACT_NUMBER
         type: string
@@ -81,7 +76,7 @@ tables:
         description: "Is the contract a free trial?"
 
       - name: CALCULATED_LOCATIONS
-        type: integer
+        type: number
         column: CALCULATED_LOCATIONS
         description: "Number of locations calculated"
 
