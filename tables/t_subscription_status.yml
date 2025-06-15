@@ -22,7 +22,7 @@ tables:
         description: "person who created"
       
       - name: CREATED_ON
-        type: timestamp
+        type: time
         column: CREATED_ON
         description: "datetime of creation"
 
@@ -52,6 +52,6 @@ tables:
         description: "name of the person who updated"
 
       - name: UPDATED_ON
-        type: timestamp
+        type: time
         column: UPDATED_ON
         description: "date time of updation"
