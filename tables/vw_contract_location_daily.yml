@@ -9,133 +9,133 @@ tables:
     #     relationship: many_to_one
     #     sql: "{TABLE.location_id} = {user_location.location_id}"
 
-dimensions:
-  - name: CONTRACT_NUMBER
-    type: string
-    column: CONTRACT_NUMBER
-    description: "Contract number"
+    dimensions:
+      - name: CONTRACT_NUMBER
+        type: string
+        column: CONTRACT_NUMBER
+        description: "Contract number"
 
-  - name: DAY_START_CONTRACT_STATUS
-    type: string
-    column: DAY_START_CONTRACT_STATUS
-    description: "Contract status at the start of the day"
+      - name: DAY_START_CONTRACT_STATUS
+        type: string
+        column: DAY_START_CONTRACT_STATUS
+        description: "Contract status at the start of the day"
 
-  - name: DAY_END_CONTRACT_STATUS
-    type: string
-    column: DAY_END_CONTRACT_STATUS
-    description: "Contract status at the end of the day"
+      - name: DAY_END_CONTRACT_STATUS
+        type: string
+        column: DAY_END_CONTRACT_STATUS
+        description: "Contract status at the end of the day"
 
-  - name: LOCATION_ID
-    type: string
-    column: LOCATION_ID
-    description: "Location ID"
+      - name: LOCATION_ID
+        type: string
+        column: LOCATION_ID
+        description: "Location ID"
 
-  - name: PRODUCT
-    type: string
-    column: PRODUCT
-    description: "Product"
+      - name: PRODUCT
+        type: string
+        column: PRODUCT
+        description: "Product"
 
-  - name: PRODUCT_DESCRIPTION
-    type: string
-    column: PRODUCT_DESCRIPTION
-    description: "Description of the product"
+      - name: PRODUCT_DESCRIPTION
+        type: string
+        column: PRODUCT_DESCRIPTION
+        description: "Description of the product"
 
-  - name: BILLING_ACCOUNT_ID
-    type: string
-    column: BILLING_ACCOUNT_ID
-    description: "Billing account ID"
+      - name: BILLING_ACCOUNT_ID
+        type: string
+        column: BILLING_ACCOUNT_ID
+        description: "Billing account ID"
 
-  - name: CHARGE_MODEL
-    type: string
-    column: CHARGE_MODEL
-    description: "Charge model used"
+      - name: CHARGE_MODEL
+        type: string
+        column: CHARGE_MODEL
+        description: "Charge model used"
 
-  - name: TERM_START_DATE
-    type: time
-    column: TERM_START_DATE
-    description: "Contract term start date"
+      - name: TERM_START_DATE
+        type: time
+        column: TERM_START_DATE
+        description: "Contract term start date"
 
-  - name: TERM_END_DATE
-    type: time
-    column: TERM_END_DATE
-    description: "Contract term end date"
+      - name: TERM_END_DATE
+        type: time
+        column: TERM_END_DATE
+        description: "Contract term end date"
 
-  - name: BILLING_CURRENCY_CODE
-    type: string
-    column: BILLING_CURRENCY_CODE
-    description: "Currency code for billing"
+      - name: BILLING_CURRENCY_CODE
+        type: string
+        column: BILLING_CURRENCY_CODE
+        description: "Currency code for billing"
 
-  - name: TERM_START
-    type: boolean
-    column: TERM_START
-    description: "Flag if it's the start of the term"
+      - name: TERM_START
+        type: boolean
+        column: TERM_START
+        description: "Flag if it's the start of the term"
 
-  - name: TERM_END
-    type: boolean
-    column: TERM_END
-    description: "Flag if it's the end of the term"
+      - name: TERM_END
+        type: boolean
+        column: TERM_END
+        description: "Flag if it's the end of the term"
 
-  - name: CONTRACT_FREE_TRIAL
-    type: boolean
-    column: CONTRACT_FREE_TRIAL
-    description: "Is the contract a free trial?"
+      - name: CONTRACT_FREE_TRIAL
+        type: boolean
+        column: CONTRACT_FREE_TRIAL
+        description: "Is the contract a free trial?"
 
-  - name: CALCULATED_LOCATIONS
-    type: integer
-    column: CALCULATED_LOCATIONS
-    description: "Number of locations calculated"
+      - name: CALCULATED_LOCATIONS
+        type: integer
+        column: CALCULATED_LOCATIONS
+        description: "Number of locations calculated"
 
-  - name: CALCULATED_STATUS
-    type: string
-    column: CALCULATED_STATUS
-    description: "Calculated contract status"
+      - name: CALCULATED_STATUS
+        type: string
+        column: CALCULATED_STATUS
+        description: "Calculated contract status"
 
-  - name: CONTRACT_BILLING_UNIT_NET_AMT_PER_LOCATION_USD
-    type: integer
-    column: CONTRACT_BILLING_UNIT_NET_AMT_PER_LOCATION_USD
-    description: "Net amount per billing unit per location in USD"
+      - name: CONTRACT_BILLING_UNIT_NET_AMT_PER_LOCATION_USD
+        type: integer
+        column: CONTRACT_BILLING_UNIT_NET_AMT_PER_LOCATION_USD
+        description: "Net amount per billing unit per location in USD"
 
-  - name: CAMPAIGNS
-    type: string
-    column: CAMPAIGNS
-    description: "Campaign information"
+      - name: CAMPAIGNS
+        type: string
+        column: CAMPAIGNS
+        description: "Campaign information"
 
-  - name: CONTRACT_START_DATE
-    type: time
-    column: CONTRACT_START_DATE
-    description: "Start date of the contract"
+      - name: CONTRACT_START_DATE
+        type: time
+        column: CONTRACT_START_DATE
+        description: "Start date of the contract"
 
-  - name: CANCELLATION_DS
-    type: time
-    column: CANCELLATION_DS
-    description: "Cancellation date"
+      - name: CANCELLATION_DS
+        type: time
+        column: CANCELLATION_DS
+        description: "Cancellation date"
 
-  - name: CANCELLATION_REASON
-    type: string
-    column: CANCELLATION_REASON
-    description: "Reason for cancellation"
+      - name: CANCELLATION_REASON
+        type: string
+        column: CANCELLATION_REASON
+        description: "Reason for cancellation"
 
-  - name: AUTO_RENEW
-    type: boolean
-    column: AUTO_RENEW
-    description: "Indicates auto-renewal"
+      - name: AUTO_RENEW
+        type: boolean
+        column: AUTO_RENEW
+        description: "Indicates auto-renewal"
 
-  - name: PLACE_TYPE
-    type: string
-    column: PLACE_TYPE
-    description: "Type of place"
+      - name: PLACE_TYPE
+        type: string
+        column: PLACE_TYPE
+        description: "Type of place"
 
-  - name: CONTINENT_NAME
-    type: string
-    column: CONTINENT_NAME
-    description: "Continent"
+      - name: CONTINENT_NAME
+        type: string
+        column: CONTINENT_NAME
+        description: "Continent"
 
-  - name: COUNTRY
-    type: string
-    column: COUNTRY
-    description: "Country"
+      - name: COUNTRY
+        type: string
+        column: COUNTRY
+        description: "Country"
 
-  - name: DS
-    type: time
-    column: DS
-    description: "Date"
+      - name: DS
+        type: time
+        column: DS
+        description: "Date"
