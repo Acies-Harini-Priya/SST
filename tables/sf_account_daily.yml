@@ -206,9 +206,9 @@ tables:
         column:  LATEST_OWNER_ENGAGEMENT 
         description: "datetime column"
 
-      - name: ESTIMATED_CURRENT_VALUE NUMBER
+      - name: ESTIMATED_CURRENT_VALUE
         type: number
-        column:  ESTIMATED_CURRENT_VALUE NUMBER
+        column:  ESTIMATED_CURRENT_VALUE
         description: "current value estimation"
 
       - name: MIGRATIONID  
