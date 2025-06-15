@@ -86,7 +86,7 @@ tables:
         description: "Calculated contract status"
 
       - name: CONTRACT_BILLING_UNIT_NET_AMT_PER_LOCATION_USD
-        type: integer
+        type: number
         column: CONTRACT_BILLING_UNIT_NET_AMT_PER_LOCATION_USD
         description: "Net amount per billing unit per location in USD"
 
