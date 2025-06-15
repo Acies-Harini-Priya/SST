@@ -1,0 +1,108 @@
+tables:
+  - name: T_B2B_PACKAGE_STATUS
+    sql: {{ load_sql('t_b2b_package_status') }}
+    description: gives the status of the package
+    public: true 
+
+    joins:
+      - name: VW_CONTRACT_LOCATION_DAILY
+        relationship: many_to_one
+        sql: "{TABLE.PACKAGE_SKU} = {VW_CONTRACT_LOCATION_DAILY.PRODUCT} AND 
+              {TABLE.CONTRACT_ID} = {VW_CONTRACT_LOCATION_DAILY.CONTRACT_NUMBER}"
+
+    dimensions:
+      - name: BILLING_ACCOUNT_ID
+        type: number
+        column: BILLING_ACCOUNT_ID
+        description: "ID"
+        
+
+      - name: CONTRACT_ID
+        type: string
+        column: CONTRACT_ID
+        description: "ID"
+
+      - name: CONTRACT_NUMBER
+        type: string
+        column: CONTRACT_NUMBER
+        description: "identifier of the contract"
+
+      - name: CREATED_BY  
+        type: string
+        column: CREATED_BY
+        description: "name of the person who created "
+
+      - name: CREATED_ON
+        type: timestamp
+        column: CREATED_ON
+        description: "creation datetime"
+
+      - name: DS
+        type: date
+        column: DS
+        description: "date column"
+      
+      - name: END_DATE
+        type: date
+        column: END_DATE
+        description: "ending date"
+
+      - name: EXTERNAL_ID
+        type: number
+        column: EXTERNAL_ID
+        description: "ID"
+
+      - name: LAST_MODIFIED_DATE
+        type: date
+        column: LAST_MODIFIED_DATE
+        description: "date modified"
+
+      - name: LOCATION_ID
+        type: number
+        column: LOCATION_ID
+        description: "ID"
+
+      - name: MRR
+        type: number
+        column: MRR
+        description: "numeric value"
+
+      - name: PACKAGE_SKU
+        type: string
+        column: PACKAGE_SKU
+        description: "unique identifier  for package"
+      
+      - name: PACKAGE_STATUS_ID
+        type: number
+        column: PACKAGE_STATUS_ID
+        description: "package status codes"
+
+      - name: PACKAGE_STATUS_NAME
+        type: string
+        column: PACKAGE_STATUS_NAME
+        description: "status of the package"
+      
+      - name: PLACE_TYPE
+        type: string
+        column: PLACE_TYPE
+        description: "type of the place"
+        
+      - name: START_DATE
+        type: date
+        column: START_DATE
+        description: "starting date"
+
+      - name: SUBSCRIPTION_ID
+        type: number
+        column: SUBSCRIPTION_ID
+        description: "ID"
+
+      - name: UPDATED_BY
+        type: string
+        column: UPDATED_BY
+        description: "name of person who updated"
+
+      - name: UPDATED_ON
+        type: timestamp
+        column: UPDATED_ON
+        description: "datetime of updation"

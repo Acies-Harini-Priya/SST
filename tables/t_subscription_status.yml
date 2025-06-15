@@ -1,0 +1,57 @@
+tables:
+  - name: T_SUBSCRIPTION_DAILY
+    sql: {{ load_sql('t_subscription_daily') }}
+    description: Captures daily subscription details
+    public: true 
+
+    joins:
+      - name: T_B2B_PACKAGE_STATUS
+        relationship: many_to_one
+        sql: "{TABLE.ID} = {t_b2b_package_status.PACKAGE_STATUS_ID}"
+
+    dimensions:
+      - name: ID
+        type: number
+        column: ID
+        description: "id"
+        primary_key: true
+
+      - name: CREATED_BY
+        type: string
+        column: CREATED_BY
+        description: "person who created"
+      
+      - name: CREATED_ON
+        type: timestamp
+        column: CREATED_ON
+        description: "datetime of creation"
+
+      - name: DESCRIPTION
+        type: string
+        column: DESCRIPTION
+        description: "description details"
+
+      - name: IS_SUBSCRIPTION_ACTIVE
+        type: boolean
+        column: IS_SUBSCRIPTION_ACTIVE
+        description: "active subscription or not"
+
+      - name: IS_SUBSCRIPTION_OWNED
+        type: boolean
+        column: IS_SUBSCRIPTION_OWNED
+        description: "subscription owned or not"
+      
+      - name: NAME
+        type: string
+        column: NAME
+        description: "person name"
+
+      - name: UPDATED_BY
+        type: string
+        column: UPDATED_BY
+        description: "name of the person who updated"
+
+      - name: UPDATED_ON
+        type: timestamp
+        column: UPDATED_ON
+        description: "date time of updation"

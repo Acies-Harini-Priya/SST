@@ -1,0 +1,53 @@
+tables:
+  - name: CURRENCY_DAILY
+    sql: {{ load_sql('currency_daily') }}
+    description: Captures details of different countries currency details
+    public: true 
+
+    joins:
+      - name: VW_CONTRACT_LOCATION_DAILY
+        relationship: many_to_one
+        sql: "{TABLE.CURRENCY_CODE} = {VW_CONTRACT_LOCATION_DAILY.BILLING_CURRENCY_CODE} AND 
+              {TABLE.DS} = {VW_CONTRACT_LOCATION_DAILY.DS}"
+
+    dimensions:
+      - name: COUNTRY
+        type: string
+        column: COUNTRY
+        description: "name of the country"
+        primary_key: true
+        
+      - name: CURRENCY_CODE
+        type: string
+        column: CURRENCY_CODE
+        description: "Unique currency code for each country"
+    
+      - name: CURRENCY_NAME
+        type: string
+        column: CURRECNY_NAME
+        description: "name of the currency"
+
+      - name: DAILY_CURRENCY_RATE
+        type: number
+        column: DAILY_CURRENCY_RATE
+        description: "each day currency rate"
+
+      - name: DS
+        type: date
+        column: DS
+        description: "date of the day"
+
+      - name: MONTHLY_CURRENCY_RATE
+        type: number
+        column: MONTHLY_CURRENCY_RATE
+        description: "monthly currency rate for each currency"
+      
+      - name: QUARTERLY_CURRENCY_RATE
+        type: number
+        column: QUARTERLY_CURRENCY_RATE
+        description: "quarterly currency rate for each currency"
+
+      - name: YEARLY_CURRENCY_RATE
+        type: number
+        column: YEARLY_CURRENCY_RATE
+        description: "yearly currency rate for each currency"

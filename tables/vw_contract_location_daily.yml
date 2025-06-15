@@ -1,0 +1,141 @@
+tables:
+  - name: VW_CONTRACT_LOCATION_DAILY
+    sql: {{ load_sql('vw_contract_location_daily') }}
+    description: Table containing information about vw_contract_location_daily.
+    public: true
+
+    # joins:
+    #   - name: user_location
+    #     relationship: many_to_one
+    #     sql: "{TABLE.location_id} = {user_location.location_id}"
+
+dimensions:
+  - name: contract_number
+    type: string
+    column: CONTRACT_NUMBER
+    description: "Contract number"
+
+  - name: day_start_contract_status
+    type: string
+    column: DAY_START_CONTRACT_STATUS
+    description: "Contract status at the start of the day"
+
+  - name: day_end_contract_status
+    type: string
+    column: DAY_END_CONTRACT_STATUS
+    description: "Contract status at the end of the day"
+
+  - name: location_id
+    type: string
+    column: LOCATION_ID
+    description: "Location ID"
+
+  - name: product
+    type: string
+    column: PRODUCT
+    description: "Product"
+
+  - name: product_description
+    type: string
+    column: PRODUCT_DESCRIPTION
+    description: "Description of the product"
+
+  - name: billing_account_id
+    type: string
+    column: BILLING_ACCOUNT_ID
+    description: "Billing account ID"
+
+  - name: charge_model
+    type: string
+    column: CHARGE_MODEL
+    description: "Charge model used"
+
+  - name: term_start_date
+    type: time
+    column: TERM_START_DATE
+    description: "Contract term start date"
+
+  - name: term_end_date
+    type: time
+    column: TERM_END_DATE
+    description: "Contract term end date"
+
+  - name: billing_currency_code
+    type: string
+    column: BILLING_CURRENCY_CODE
+    description: "Currency code for billing"
+
+  - name: term_start
+    type: boolean
+    column: TERM_START
+    description: "Flag if it's the start of the term"
+
+  - name: term_end
+    type: boolean
+    column: TERM_END
+    description: "Flag if it's the end of the term"
+
+  - name: contract_free_trial
+    type: boolean
+    column: CONTRACT_FREE_TRIAL
+    description: "Is the contract a free trial?"
+
+  - name: calculated_locations
+    type: integer
+    column: CALCULATED_LOCATIONS
+    description: "Number of locations calculated"
+
+  - name: calculated_status
+    type: string
+    column: CALCULATED_STATUS
+    description: "Calculated contract status"
+
+  - name: contract_billing_unit_net_amt_per_location_usd
+    type: integer
+    column: CONTRACT_BILLING_UNIT_NET_AMT_PER_LOCATION_USD
+    description: "Net amount per billing unit per location in USD"
+
+  - name: campaigns
+    type: string
+    column: CAMPAIGNS
+    description: "Campaign information"
+
+  - name: contract_start_date
+    type: time
+    column: CONTRACT_START_DATE
+    description: "Start date of the contract"
+
+  - name: cancellation_ds
+    type: time
+    column: CANCELLATION_DS
+    description: "Cancellation date"
+
+  - name: cancellation_reason
+    type: string
+    column: CANCELLATION_REASON
+    description: "Reason for cancellation"
+
+  - name: auto_renew
+    type: boolean
+    column: AUTO_RENEW
+    description: "Indicates auto-renewal"
+
+  - name: place_type
+    type: string
+    column: PLACE_TYPE
+    description: "Type of place"
+
+  - name: continent_name
+    type: string
+    column: CONTINENT_NAME
+    description: "Continent"
+
+  - name: country
+    type: string
+    column: COUNTRY
+    description: "Country"
+
+  - name: ds
+    type: time
+    column: DS
+    description: "Date"
