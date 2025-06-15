@@ -97,12 +97,12 @@ tables:
         description: "yes or no for auto renewal"
 
       - name: BUSINESS_LISTING_PURCHASE_DATE
-        type: date
+        type: time
         column: BUSINESS_LISTING_PURCHASE_DATE
         description: "date of purchase"
 
       - name: BUSINESS_LISTING_RENEWAL_DATE
-        type: date
+        type: time
         column: BUSINESS_LISTING_RENEWAL_DATE
         description: "date of renewal"
       
@@ -117,7 +117,7 @@ tables:
         description: "no of days since last activity"
 
       - name: LAST_ACTIVITY_DATE
-        type: date
+        type: time
         column: LAST_ACTIVITY_DATE
         description: "date of last activity"
       
@@ -132,12 +132,12 @@ tables:
         description: "usa pricing for last paid"
       
       - name: LATEST_ABANDON_CART
-        type: datetime
+        type: time
         column: LATEST_ABANDON_CART
         description: "datetime column"
 
       - name: LATEST_MARKETING_ENGAGEMENT
-        type: timestamp
+        type: time
         column: LATEST_MARKETING_ENGAGEMENT
         description: "datetime column"
 
@@ -172,7 +172,7 @@ tables:
         description: "different segements of digital advertising"
 
       - name: DS
-        type: date
+        type: time
         column: DS
         description: "date"
 
@@ -181,7 +181,7 @@ tables:
         column: ACCOUNT_COUNTRY
         description: "account country name"
 
-      - name:   INDUSTRY
+      - name: INDUSTRY
         type: string
         column:   INDUSTRY
         description: "industry type"
@@ -191,7 +191,7 @@ tables:
         column: HYBRID 
         description: "if it is hybrid or not"
 
-      - name:  PARENT_BRAND
+      - name: PARENT_BRAND
         type: string
         column:  PARENT_BRAND
         description: "name of parent brand"
@@ -201,17 +201,17 @@ tables:
         column: PIO_CREDIT_STATUS 
         description: "status"
 
-      - name:  LATEST_OWNER_ENGAGEMENT 
+      - name: LATEST_OWNER_ENGAGEMENT 
         type: timestamp
         column:  LATEST_OWNER_ENGAGEMENT 
         description: "datetime column"
 
-      - name:  ESTIMATED_CURRENT_VALUE NUMBER
+      - name: ESTIMATED_CURRENT_VALUE NUMBER
         type: number
         column:  ESTIMATED_CURRENT_VALUE NUMBER
         description: "current value estimation"
 
-      - name:  MIGRATIONID  
+      - name: MIGRATIONID  
         type: string
         column:  MIGRATIONID 
         description: "id"

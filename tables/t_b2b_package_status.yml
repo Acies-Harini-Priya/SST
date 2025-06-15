@@ -38,12 +38,12 @@ tables:
         description: "creation datetime"
 
       - name: DS
-        type: date
+        type: time
         column: DS
         description: "date column"
       
       - name: END_DATE
-        type: date
+        type: time
         column: END_DATE
         description: "ending date"
 
@@ -53,7 +53,7 @@ tables:
         description: "ID"
 
       - name: LAST_MODIFIED_DATE
-        type: date
+        type: time
         column: LAST_MODIFIED_DATE
         description: "date modified"
 
@@ -88,7 +88,7 @@ tables:
         description: "type of the place"
         
       - name: START_DATE
-        type: date
+        type: time
         column: START_DATE
         description: "starting date"
 
