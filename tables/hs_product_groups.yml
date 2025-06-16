@@ -4,11 +4,6 @@ tables:
     description: Captures details of product groups
     public: true 
 
-    joins:
-      - name: VW_CONTRACT_LOCATION_DAILY
-        relationship: many_to_one
-        sql: "{TABLE.SKU} = {VW_CONTRACT_LOCATION_DAILY.PRODUCT}"
-
     dimensions:
       - name: ID
         type: number

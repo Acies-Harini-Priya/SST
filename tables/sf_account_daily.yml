@@ -4,11 +4,6 @@ tables:
     description: Captures details of users and their visits
     public: true 
 
-    joins:
-      - name: VW_CONTRACT_LOCATION_DAILY
-        relationship: many_to_one
-        sql: "{TABLE.LOCATION_ID} = {VW_CONTRACT_LOCATION_DAILY.LOCATION_ID}"
-
     dimensions:
       - name: ID
         type: string

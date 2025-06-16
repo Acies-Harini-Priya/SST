@@ -4,11 +4,6 @@ tables:
     description: Captures daily subscription details
     public: true 
 
-    joins:
-      - name: T_B2B_PACKAGE_STATUS
-        relationship: many_to_one
-        sql: "{TABLE.ID} = {t_b2b_package_status.PACKAGE_STATUS_ID}"
-
     dimensions:
       - name: ID
         type: number

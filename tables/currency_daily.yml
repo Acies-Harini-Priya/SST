@@ -4,12 +4,6 @@ tables:
     description: Captures details of different countries currency details
     public: true 
 
-    joins:
-      - name: VW_CONTRACT_LOCATION_DAILY
-        relationship: many_to_one
-        sql: "{TABLE.CURRENCY_CODE} = {VW_CONTRACT_LOCATION_DAILY.BILLING_CURRENCY_CODE} AND 
-              {TABLE.DS} = {VW_CONTRACT_LOCATION_DAILY.DS}"
-
     dimensions:
       - name: COUNTRY
         type: string

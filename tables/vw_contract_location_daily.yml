@@ -4,6 +4,29 @@ tables:
     description: Table containing information about vw_contract_location_daily.
     public: true
 
+    joins:
+      - name: CURRENCY_DAILY
+        relationship: one_to_many
+        sql: "{TABLE.BILLING_CURRENCY_CODE} = {CURRENCY_DAILY.CURRENCY_CODE} AND 
+              {TABLE.DS} = {CURRENCY_DAILY.DS}"
+
+      - name: HS_PRODUCT_GROUPS
+        relationship: one_to_many
+        sql: "{TABLE.PRODUCT} = {HS_PRODUCT_GROUPS.SKU}"
+
+      - name: SF_ACCOUNT_DAILY
+        relationship: one_to_many
+        sql: "{TABLE.LOCATION_ID} = {SF_ACCOUNT_DAILY.LOCATION_ID}"
+
+      - name: T_B2B_PACKAGE_STATUS
+        relationship: one_to_many
+        sql: "{TABLE.PRODUCT} = {T_B2B_PACKAGE_STATUS.PACKAGE_SKU} AND 
+              {TABLE.CONTRACT_NUMBER} = {T_B2B_PACKAGE_STATUS.CONTRACT_ID}"
+
+      - name: T_SUBSCRIPTION_STATUS
+        relationship: one_to_many
+        sql: "{T_SUBSCRIPTION_STATUS.ID} = {T_B2B_PACKAGE_STATUS.PACKAGE_STATUS_ID}"
+
     dimensions:
       - name: CONTRACT_NUMBER
         type: string

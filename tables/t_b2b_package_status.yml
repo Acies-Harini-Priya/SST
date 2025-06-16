@@ -4,12 +4,6 @@ tables:
     description: gives the status of the package
     public: true 
 
-    joins:
-      - name: VW_CONTRACT_LOCATION_DAILY
-        relationship: many_to_one
-        sql: "{TABLE.PACKAGE_SKU} = {VW_CONTRACT_LOCATION_DAILY.PRODUCT} AND 
-              {TABLE.CONTRACT_ID} = {VW_CONTRACT_LOCATION_DAILY.CONTRACT_NUMBER}"
-
     dimensions:
       - name: BILLING_ACCOUNT_ID
         type: number
