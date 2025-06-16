@@ -1,5 +1,5 @@
 tables:
-  - name: T_SUBSCRIPTION_DAILY
+  - name: T_SUBSCRIPTION_STATUS
     sql: {{ load_sql('t_subscription_status') }}
     description: Captures daily subscription details
     public: true 
