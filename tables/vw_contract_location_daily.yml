@@ -166,6 +166,6 @@ tables:
 
       - name: avg_net_amt_per_location_usd
         sql: CONTRACT_BILLING_UNIT_NET_AMT_PER_LOCATION_USD
-        type: average
+        type: avg
         description: Average net billing unit amount per location in USD
 

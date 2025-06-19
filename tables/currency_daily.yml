@@ -59,15 +59,15 @@ tables:
 
       - name: AVG_MONTHLY_CURRENCY_RATE
         sql: MONTHLY_CURRENCY_RATE
-        type: average 
+        type: avg 
         description: Average Monthly currency rate
       
       - name: AVG_QUARTERLY_CURRENCY_RATE
         sql: QUARTERLY_CURRENCY_RATE
-        type: average 
+        type: avg 
         description: Average Quarterly currency rate
 
       - name: AVG_YEARLY_CURRENCY_RATE
         sql: YEARLY_CURRENCY_RATE
-        type: average 
+        type: avg 
         description: Average yearly currency rate

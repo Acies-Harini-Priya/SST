@@ -219,12 +219,12 @@ tables:
 
       - name: average_last_paid_price_usd
         sql: LAST_PAID_PRICE_USD
-        type: average
+        type: avg
         description: Average last paid price in USD
 
       - name: average_lead_score
         sql: LEAD_SCORE_NEW
-        type: average
+        type: avg
         description: Average lead score across accounts
 
       - name: total_commerce_value
