@@ -45,3 +45,29 @@ tables:
         type: number
         column: YEARLY_CURRENCY_RATE
         description: "yearly currency rate for each currency"
+    
+    measures:
+      - name: DISTINCT_CURRENCY_CODE
+        sql: CURRENCY_CODE
+        type: count_distinct 
+        description: Total distinct currency code
+
+      - name: DISTINCT_COUNTRY
+        sql: COUNTRY
+        type: count_distinct 
+        description: Toatl distinct country
+
+      - name: AVG_MONTHLY_CURRENCY_RATE
+        sql: MONTHLY_CURRENCY_RATE
+        type: average 
+        description: Average Monthly currency rate
+      
+      - name: AVG_QUARTERLY_CURRENCY_RATE
+        sql: QUARTERLY_CURRENCY_RATE
+        type: average 
+        description: Average Quarterly currency rate
+
+      - name: AVG_YEARLY_CURRENCY_RATE
+        sql: YEARLY_CURRENCY_RATE
+        type: average 
+        description: Average yearly currency rate

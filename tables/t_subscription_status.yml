@@ -50,3 +50,14 @@ tables:
         type: time
         column: UPDATED_ON
         description: "date time of updation"
+
+    measures:
+      - name: count_id
+        sql: ID
+        type: count_distinct
+        description: Total distinct IDs in the dataset
+
+      - name: Subscription_Active
+        sql: IS_SUBSCRIPTION_ACTIVE
+        type: boolean
+        description: The total number of Active customers       

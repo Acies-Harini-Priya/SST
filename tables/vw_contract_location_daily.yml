@@ -157,3 +157,15 @@ tables:
         type: time
         column: DS
         description: "Date"
+
+    measures: 
+      - name: total_contracts
+        sql: CONTRACT_NUMBER
+        type: count_distinct
+        description: Total number of distinct contracts in the dataset
+
+      - name: avg_net_amt_per_location_usd
+        sql: CONTRACT_BILLING_UNIT_NET_AMT_PER_LOCATION_USD
+        type: average
+        description: Average net billing unit amount per location in USD
+

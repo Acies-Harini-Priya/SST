@@ -100,3 +100,24 @@ tables:
         type: time
         column: UPDATED_ON
         description: "datetime of updation"
+
+    measures: 
+      - name: TOTAL_MRR
+        sql: MRR
+        type: sum
+        description: Total Monthly Recurring Revenue
+
+      - name: TOTAL_CONTRACTS
+        sql: "COUNT(Distinct {CONTRACT_ID})"
+        type: number
+        description: Number of unique contracts
+
+      - name: AVG_MRR_PER_ACCOUNT
+        sql: SUM(MRR) / COUNT(DISTINCT BILLING_ACCOUNT_ID)
+        type: number
+        description: Average revenue per billing account, used for ARPA (Average Revenue Per Account) metric
+
+      - name: ACTIVE_PACKAGE_COUNT
+        sql: COUNT(*) WHERE PACKAGE_STATUS_NAME = 'Active'
+        type: number
+        description: Count of currently active packages

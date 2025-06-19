@@ -40,3 +40,14 @@ tables:
         type: string
         column: SKU
         description: "code value"
+
+    measures: 
+      - name: distinct_product_class
+        sql: PRODUCT_CLASS
+        type: count_distinct
+        description: Distinct Product Class 
+
+      - name: distinct_product_department
+        sql: PRODUCT_DEPARTMENT
+        type: count
+        description: Distinct Product Department

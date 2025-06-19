@@ -210,3 +210,24 @@ tables:
         type: string
         column:  MIGRATIONID 
         description: "id"
+    
+    measures:
+      - name: total_estimated_current_value
+        sql: ESTIMATED_CURRENT_VALUE
+        type: sum
+        description: Total estimated current value across all accounts
+
+      - name: average_last_paid_price_usd
+        sql: LAST_PAID_PRICE_USD
+        type: average
+        description: Average last paid price in USD
+
+      - name: average_lead_score
+        sql: LEAD_SCORE_NEW
+        type: average
+        description: Average lead score across accounts
+
+      - name: total_commerce_value
+        sql: COMMERCE_NEW
+        type: sum
+        description: Total value of new commerce across accounts
