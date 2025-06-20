@@ -39,6 +39,6 @@ select
     pio_credit_status ,
     latest_owner_engagement ,
     estimated_current_value ,
-    migrationid ,
+    migrationid
 from
     sstdepot.hs_sst.sf_account_daily
