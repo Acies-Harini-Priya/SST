@@ -8,4 +8,4 @@ SELECT
 	yearly_currency_rate ,
 	ds 
 FROM
-    hs_sst.currency_daily
+    sstdepot.hs_sst.currency_daily
