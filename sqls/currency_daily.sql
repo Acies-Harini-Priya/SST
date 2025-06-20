@@ -1,11 +1,11 @@
 SELECT
-    CURRENCY_CODE ,
-	CURRENCY_NAME ,
-	COUNTRY ,
-	DAILY_CURRENCY_RATE ,
-	MONTHLY_CURRENCY_RATE ,
-	QUARTERLY_CURRENCY_RATE ,
-	YEARLY_CURRENCY_RATE ,
-	DS 
+    currency_code ,
+	currency_name ,
+	country ,
+	daily_currency_rate ,
+	monthly_currency_rate ,
+	quarterly_currency_rate ,
+	yearly_currency_rate ,
+	ds 
 FROM
-    dataos://sstdepot:HS_SST/CURRENCY_DAILY
+    HS_SST.CURRENCY_DAILY

@@ -1,73 +1,73 @@
 tables:
-  - name: CURRENCY_DAILY
+  - name: currency_daily
     sql: {{ load_sql('currency_daily') }}
     description: Captures details of different countries currency details
     public: true 
 
     dimensions:
-      - name: COUNTRY
+      - name: country
         type: string
-        column: COUNTRY
+        column: country
         description: "name of the country"
         primary_key: true
         
-      - name: CURRENCY_CODE
+      - name: currency_code
         type: string
-        column: CURRENCY_CODE
-        description: "Unique currency code for each country"
+        column: currency_code
+        description: "unique currency code for each country"
     
-      - name: CURRENCY_NAME
+      - name: currency_name
         type: string
-        column: CURRENCY_NAME
+        column: currency_name
         description: "name of the currency"
 
-      - name: DAILY_CURRENCY_RATE
+      - name: daily_currency_rate
         type: number
-        column: DAILY_CURRENCY_RATE
+        column: daily_currency_rate
         description: "each day currency rate"
 
-      - name: DS
+      - name: ds
         type: time
-        column: DS
+        column: ds
         description: "date of the day"
 
-      - name: MONTHLY_CURRENCY_RATE
+      - name: monthly_currency_rate
         type: number
-        column: MONTHLY_CURRENCY_RATE
+        column: monthly_currency_rate
         description: "monthly currency rate for each currency"
       
-      - name: QUARTERLY_CURRENCY_RATE
+      - name: quarterly_currency_rate
         type: number
-        column: QUARTERLY_CURRENCY_RATE
+        column: quarterly_currency_rate
         description: "quarterly currency rate for each currency"
 
-      - name: YEARLY_CURRENCY_RATE
+      - name: yearly_currency_rate
         type: number
-        column: YEARLY_CURRENCY_RATE
+        column: yearly_currency_rate
         description: "yearly currency rate for each currency"
     
     measures:
-      - name: DISTINCT_CURRENCY_CODE
-        sql: CURRENCY_CODE
+      - name: distinct_currency_code
+        sql: currency_code
         type: count_distinct 
-        description: "Total distinct currency code"
+        description: "total distinct currency code"
 
-      - name: DISTINCT_COUNTRY
-        sql: COUNTRY
+      - name: distinct_country
+        sql: country
         type: count_distinct 
-        description: "Total distinct country"
+        description: "total distinct country"
 
-      - name: AVG_MONTHLY_CURRENCY_RATE
-        sql: MONTHLY_CURRENCY_RATE
+      - name: avg_monthly_currency_rate
+        sql: monthly_currency_rate
         type: avg 
-        description: "Average Monthly currency rate"
+        description: "average monthly currency rate"
       
-      - name: AVG_QUARTERLY_CURRENCY_RATE
-        sql: QUARTERLY_CURRENCY_RATE
+      - name: avg_quarterly_currency_rate
+        sql: quarterly_currency_rate
         type: avg 
-        description: "Average Quarterly currency rate"
+        description: "average quarterly currency rate"
 
-      - name: AVG_YEARLY_CURRENCY_RATE
-        sql: YEARLY_CURRENCY_RATE
+      - name: avg_yearly_currency_rate
+        sql: yearly_currency_rate
         type: avg 
-        description: "Average yearly currency rate"
+        description: "average yearly currency rate"
