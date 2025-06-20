@@ -1,53 +1,53 @@
 tables:
-  - name: HS_PRODUCT_GROUPS
+  - name: hs_product_groups
     sql: {{ load_sql('hs_product_groups') }}
-    description: Captures details of product groups
+    description: captures details of product groups
     public: true 
 
     dimensions:
-      - name: ID
+      - name: id
         type: number
-        column: ID
-        description: "ID"
+        column: id
+        description: "id"
         primary_key: true
 
-      - name: PRODUCT_CLASS
+      - name: product_class
         type: string
-        column: PRODUCT_CLASS
+        column: product_class
         description: "class of the product"
 
-      - name: PRODUCT_DEPARTMENT
+      - name: product_department
         type: string
-        column: PRODUCT_DEPARTMENT
+        column: product_department
         description: "which department the product belongs to"
 
-      - name: PRODUCT_DESCRIPTION
+      - name: product_description
         type: string
-        column: PRODUCT_DESCRIPTION
+        column: product_description
         description: "description of the product"
 
-      - name: PRODUCT_DIVISION
+      - name: product_division
         type: string
-        column: PRODUCT_DIVISION
+        column: product_division
         description: "division group of product"
 
-      - name: PRODUCT_FAMILY
+      - name: product_family
         type: string
-        column: PRODUCT_FAMILY
+        column: product_family
         description: "family of the product"
       
-      - name: SKU
+      - name: sku
         type: string
-        column: SKU
+        column: sku
         description: "code value"
 
     measures: 
       - name: distinct_product_class
-        sql: PRODUCT_CLASS
+        sql: product_class
         type: count_distinct
-        description: Distinct Product Class 
+        description: distinct product class 
 
       - name: distinct_product_department
-        sql: PRODUCT_DEPARTMENT
+        sql: product_department
         type: count
-        description: Distinct Product Department
+        description: distinct product department

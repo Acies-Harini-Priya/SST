@@ -1,10 +1,10 @@
-SELECT
-	ID ,
-	SKU,
-	PRODUCT_DESCRIPTION ,
-	PRODUCT_DIVISION ,
-	PRODUCT_DEPARTMENT ,
-	PRODUCT_FAMILY ,
-	PRODUCT_CLASS
-FROM
-    dataos://sstdepot:HS_SST/HS_PRODUCT_GROUPS
+select
+	id ,
+	sku,
+	product_description ,
+	product_division ,
+	product_department ,
+	product_family ,
+	product_class
+from
+    sstdepot.hs_sst.hs_product_groups

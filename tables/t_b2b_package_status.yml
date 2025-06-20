@@ -1,126 +1,126 @@
 tables:
-  - name: T_B2B_PACKAGE_STATUS
+  - name: t_b2b_package_status
     sql: {{ load_sql('t_b2b_package_status') }}
     description: gives the status of the package
     public: true 
 
     dimensions:
-      - name: BILLING_ACCOUNT_ID
+      - name: billing_account_id
         type: number
-        column: BILLING_ACCOUNT_ID
-        description: "ID"
+        column: billing_account_id
+        description: "id"
         
 
-      - name: CONTRACT_ID
+      - name: contract_id
         type: string
-        column: CONTRACT_ID
-        description: "ID"
+        column: contract_id
+        description: "id"
         primary_key: true
 
-      - name: CONTRACT_NUMBER
+      - name: contract_number
         type: string
-        column: CONTRACT_NUMBER
+        column: contract_number
         description: "identifier of the contract"
 
-      - name: CREATED_BY  
+      - name: created_by  
         type: string
-        column: CREATED_BY
+        column: created_by
         description: "name of the person who created "
 
-      - name: CREATED_ON
+      - name: created_on
         type: time
-        column: CREATED_ON
+        column: created_on
         description: "creation datetime"
 
-      - name: DS
+      - name: ds
         type: time
-        column: DS
+        column: ds
         description: "date column"
       
-      - name: END_DATE
+      - name: end_date
         type: time
-        column: END_DATE
+        column: end_date
         description: "ending date"
 
-      - name: EXTERNAL_ID
+      - name: external_id
         type: number
-        column: EXTERNAL_ID
-        description: "ID"
+        column: external_id
+        description: "id"
 
-      - name: LAST_MODIFIED_DATE
+      - name: last_modified_date
         type: time
-        column: LAST_MODIFIED_DATE
+        column: last_modified_date
         description: "date modified"
 
-      - name: LOCATION_ID
+      - name: location_id
         type: number
-        column: LOCATION_ID
-        description: "ID"
+        column: location_id
+        description: "id"
         primary_key: true
 
-      - name: MRR
+      - name: mrr
         type: number
-        column: MRR
+        column: mrr
         description: "numeric value"
 
-      - name: PACKAGE_SKU
+      - name: package_sku
         type: string
-        column: PACKAGE_SKU
+        column: package_sku
         description: "unique identifier  for package"
         primary_key: true
       
-      - name: PACKAGE_STATUS_ID
+      - name: package_status_id
         type: number
-        column: PACKAGE_STATUS_ID
+        column: package_status_id
         description: "package status codes"
 
-      - name: PACKAGE_STATUS_NAME
+      - name: package_status_name
         type: string
-        column: PACKAGE_STATUS_NAME
+        column: package_status_name
         description: "status of the package"
       
-      - name: PLACE_TYPE
+      - name: place_type
         type: string
-        column: PLACE_TYPE
+        column: place_type
         description: "type of the place"
         
-      - name: START_DATE
+      - name: start_date
         type: time
-        column: START_DATE
+        column: start_date
         description: "starting date"
 
-      - name: SUBSCRIPTION_ID
+      - name: subscription_id
         type: number
-        column: SUBSCRIPTION_ID
-        description: "ID"
+        column: subscription_id
+        description: "id"
 
-      - name: UPDATED_BY
+      - name: updated_by
         type: string
-        column: UPDATED_BY
+        column: updated_by
         description: "name of person who updated"
 
-      - name: UPDATED_ON
+      - name: updated_on
         type: time
-        column: UPDATED_ON
+        column: updated_on
         description: "datetime of updation"
 
     measures: 
-      - name: TOTAL_MRR
-        sql: MRR
+      - name: total_mrr
+        sql: mrr
         type: sum
-        description: Total Monthly Recurring Revenue
+        description: total monthly recurring revenue
 
-      - name: TOTAL_CONTRACTS
-        sql: "COUNT(Distinct {CONTRACT_ID})"
+      - name: total_contracts
+        sql: "count(distinct {contract_id})"
         type: number
-        description: Number of unique contracts
+        description: number of unique contracts
 
-      - name: AVG_MRR_PER_ACCOUNT
-        sql: SUM(MRR) / COUNT(DISTINCT BILLING_ACCOUNT_ID)
+      - name: avg_mrr_per_account
+        sql: sum(mrr) / count(distinct billing_account_id)
         type: number
-        description: Average revenue per billing account, used for ARPA (Average Revenue Per Account) metric
+        description: average revenue per billing account, used for arpa (average revenue per account) metric
 
-      - name: ACTIVE_PACKAGE_COUNT
-        sql: COUNT(*) WHERE PACKAGE_STATUS_NAME = 'Active'
+      - name: active_package_count
+        sql: count(*) where package_status_name = 'active'
         type: number
-        description: Count of currently active packages
+        description: count of currently active packages

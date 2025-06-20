@@ -1,233 +1,233 @@
 tables:
-  - name: SF_ACCOUNT_DAILY
+  - name: sf_account_daily
     sql: {{ load_sql('sf_account_daily') }}
-    description: Captures details of users and their visits
+    description: captures details of users and their visits
     public: true 
 
     dimensions:
-      - name: ID
+      - name: id
         type: string
-        column: ID
+        column: id
         description: "id"
         primary_key: true
 
-      - name: DELETE_FLAG
+      - name: delete_flag
         type: string
-        column: DELETE_FLAG
+        column: delete_flag
         description: "if it is deleted or not"
 
-      - name: NAMEX
+      - name: namex
         type: string
-        column: NAMEX
+        column: namex
         description: "name of the account"
 
-      - name: RECORDTYPEID
+      - name: recordtypeid
         type: number
-        column: RECORDTYPEID
+        column: recordtypeid
         description: "id"
 
-      - name: PARENTID
+      - name: parentid
         type: string
-        column: PARENTID
+        column: parentid
         description: "id"
 
-      - name: GEO_ID
+      - name: geo_id
         type: number
-        column: GEO_ID
+        column: geo_id
         description: "id"
       
-      - name: BILLINGCOUNTRY
+      - name: billingcountry
         type: string
-        column: BILLINGCOUNTRY
-        description: "Country where billing took place"
+        column: billingcountry
+        description: "country where billing took place"
 
-      - name: OWNERID
+      - name: ownerid
         type: string
-        column: OWNERID
+        column: ownerid
         description: "id"
       
-      - name: LOCATION_ID
+      - name: location_id
         type: number
-        column: LOCATION_ID
+        column: location_id
         description: "id of the location"
         
-      - name: ON_SELLING_ACCOUNT
+      - name: on_selling_account
         type: boolean
-        column: ON_SELLING_ACCOUNT
+        column: on_selling_account
         description: "if its a selling account or not"
 
-      - name: REGION
+      - name: region
         type: string
-        column: REGION
+        column: region
         description: "region information"
 
-      - name: TARGET_PROPERTY
+      - name: target_property
         type: string
-        column: TARGET_PROPERTY
+        column: target_property
         description: "info about the property"
 
-      - name: DO_NOT_CALL_KEY_ACCOUNT
+      - name: do_not_call_key_account
         type: boolean
-        column: DO_NOT_CALL_KEY_ACCOUNT
+        column: do_not_call_key_account
         description: "yes or no info about call key"
 
-      - name: BUSINESS_OWNER
+      - name: business_owner
         type: string
-        column: BUSINESS_OWNER
+        column: business_owner
         description: "name of the business owner"
 
-      - name: BUSINESS_TYPE
+      - name: business_type
         type: string
-        column: BUSINESS_TYPE
+        column: business_type
         description: "type of business"
       
-      - name: ROI_VALUE_SEGMENT
+      - name: roi_value_segment
         type: string
-        column: ROI_VALUE_SEGMENT
-        description: "ROI segmentation"
+        column: roi_value_segment
+        description: "roi segmentation"
 
-      - name: AUTO_RENEW 
+      - name: auto_renew 
         type: boolean
-        column: AUTO_RENEW 
+        column: auto_renew 
         description: "yes or no for auto renewal"
 
-      - name: BUSINESS_LISTING_PURCHASE_DATE
+      - name: business_listing_purchase_date
         type: time
-        column: BUSINESS_LISTING_PURCHASE_DATE
+        column: business_listing_purchase_date
         description: "date of purchase"
 
-      - name: BUSINESS_LISTING_RENEWAL_DATE
+      - name: business_listing_renewal_date
         type: time
-        column: BUSINESS_LISTING_RENEWAL_DATE
+        column: business_listing_renewal_date
         description: "date of renewal"
       
-      - name: COMMERCE_NEW 
+      - name: commerce_new 
         type: number
-        column: COMMERCE_NEW 
+        column: commerce_new 
         description: "new commerce value"
       
-      - name: DAYS_SINCE_LAST_ACTIVITY
+      - name: days_since_last_activity
         type: number
-        column: DAYS_SINCE_LAST_ACTIVITY
+        column: days_since_last_activity
         description: "no of days since last activity"
 
-      - name: LAST_ACTIVITY_DATE
+      - name: last_activity_date
         type: time
-        column: LAST_ACTIVITY_DATE
+        column: last_activity_date
         description: "date of last activity"
       
-      - name: LAST_PAID_PRICE_LOCAL 
+      - name: last_paid_price_local 
         type: number
-        column: LAST_PAID_PRICE_LOCAL 
+        column: last_paid_price_local 
         description: "local price on last paid"
 
-      - name: LAST_PAID_PRICE_USD
+      - name: last_paid_price_usd
         type: number
-        column:  LAST_PAID_PRICE_USD
+        column:  last_paid_price_usd
         description: "usa pricing for last paid"
       
-      - name: LATEST_ABANDON_CART
+      - name: latest_abandon_cart
         type: time
-        column: LATEST_ABANDON_CART
+        column: latest_abandon_cart
         description: "datetime column"
 
-      - name: LATEST_MARKETING_ENGAGEMENT
+      - name: latest_marketing_engagement
         type: time
-        column: LATEST_MARKETING_ENGAGEMENT
+        column: latest_marketing_engagement
         description: "datetime column"
 
-      - name:  LEAD_SCORE_NEW 
+      - name:  lead_score_new 
         type: number
-        column:  LEAD_SCORE_NEW 
+        column:  lead_score_new 
         description: "new lead score"
 
-      - name: PSP_CURRENCY_CODE
+      - name: psp_currency_code
         type: string
-        column: PSP_CURRENCY_CODE
+        column: psp_currency_code
         description: "currency code"
 
-      - name:  OWNERID_18
+      - name:  ownerid_18
         type: string
-        column:  OWNERID_18
+        column:  ownerid_18
         description: "id"
 
-      - name:  SUB_REGION
+      - name:  sub_region
         type: string
-        column:  SUB_REGION
+        column:  sub_region
         description: "sub region details"
 
-      - name: SERVICE_TIER
+      - name: service_tier
         type: string
-        column: SERVICE_TIER
+        column: service_tier
         description: "segregation of service tier"
       
-      - name: DIGITAL_ADVERTISING_SEGMENT
+      - name: digital_advertising_segment
         type: string
-        column: DIGITAL_ADVERTISING_SEGMENT
+        column: digital_advertising_segment
         description: "different segements of digital advertising"
 
-      - name: DS
+      - name: ds
         type: time
-        column: DS
+        column: ds
         description: "date"
 
-      - name: ACCOUNT_COUNTRY
+      - name: account_country
         type: string
-        column: ACCOUNT_COUNTRY
+        column: account_country
         description: "account country name"
 
-      - name: INDUSTRY
+      - name: industry
         type: string
-        column:   INDUSTRY
+        column:   industry
         description: "industry type"
 
-      - name: HYBRID 
+      - name: hybrid 
         type: boolean
-        column: HYBRID 
+        column: hybrid 
         description: "if it is hybrid or not"
 
-      - name: PARENT_BRAND
+      - name: parent_brand
         type: string
-        column:  PARENT_BRAND
+        column:  parent_brand
         description: "name of parent brand"
       
-      - name: PIO_CREDIT_STATUS 
+      - name: pio_credit_status 
         type: string
-        column: PIO_CREDIT_STATUS 
+        column: pio_credit_status 
         description: "status"
 
-      - name: LATEST_OWNER_ENGAGEMENT 
+      - name: latest_owner_engagement 
         type: time
-        column:  LATEST_OWNER_ENGAGEMENT 
+        column:  latest_owner_engagement 
         description: "datetime column"
 
-      - name: ESTIMATED_CURRENT_VALUE
+      - name: estimated_current_value
         type: number
-        column:  ESTIMATED_CURRENT_VALUE
+        column:  estimated_current_value
         description: "current value estimation"
 
-      - name: MIGRATIONID  
+      - name: migrationid  
         type: string
-        column:  MIGRATIONID 
+        column:  migrationid 
         description: "id"
     
     measures:
       - name: total_estimated_current_value
-        sql: ESTIMATED_CURRENT_VALUE
+        sql: estimated_current_value
         type: sum
-        description: Total estimated current value across all accounts
+        description: total estimated current value across all accounts
 
       - name: average_last_paid_price_usd
-        sql: LAST_PAID_PRICE_USD
+        sql: last_paid_price_usd
         type: avg
-        description: Average last paid price in USD
+        description: average last paid price in usd
 
       - name: average_lead_score
-        sql: LEAD_SCORE_NEW
+        sql: lead_score_new
         type: avg
-        description: Average lead score across accounts
+        description: average lead score across accounts
 
       - name: total_commerce_value
-        sql: COMMERCE_NEW
+        sql: commerce_new
         type: sum
-        description: Total value of new commerce across accounts
+        description: total value of new commerce across accounts

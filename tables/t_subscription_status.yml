@@ -1,63 +1,63 @@
 tables:
-  - name: T_SUBSCRIPTION_STATUS
+  - name: t_subscription_status
     sql: {{ load_sql('t_subscription_status') }}
-    description: Captures daily subscription details
+    description: captures daily subscription details
     public: true 
 
     dimensions:
-      - name: ID
+      - name: id
         type: number
-        column: ID
+        column: id
         description: "id"
         primary_key: true
 
-      - name: CREATED_BY
+      - name: created_by
         type: string
-        column: CREATED_BY
+        column: created_by
         description: "person who created"
       
-      - name: CREATED_ON
+      - name: created_on
         type: time
-        column: CREATED_ON
+        column: created_on
         description: "datetime of creation"
 
-      - name: DESCRIPTION
+      - name: description
         type: string
-        column: DESCRIPTION
+        column: description
         description: "description details"
 
-      - name: IS_SUBSCRIPTION_ACTIVE
+      - name: is_subscription_active
         type: boolean
-        column: IS_SUBSCRIPTION_ACTIVE
+        column: is_subscription_active
         description: "active subscription or not"
 
-      - name: IS_SUBSCRIPTION_OWNED
+      - name: is_subscription_owned
         type: boolean
-        column: IS_SUBSCRIPTION_OWNED
+        column: is_subscription_owned
         description: "subscription owned or not"
       
-      - name: NAME
+      - name: name
         type: string
-        column: NAME
+        column: name
         description: "person name"
 
-      - name: UPDATED_BY
+      - name: updated_by
         type: string
-        column: UPDATED_BY
+        column: updated_by
         description: "name of the person who updated"
 
-      - name: UPDATED_ON
+      - name: updated_on
         type: time
-        column: UPDATED_ON
+        column: updated_on
         description: "date time of updation"
 
     measures:
       - name: count_id
-        sql: ID
+        sql: id
         type: count_distinct
-        description: Total distinct IDs in the dataset
+        description: total distinct ids in the dataset
 
-      - name: Subscription_Active
-        sql: IS_SUBSCRIPTION_ACTIVE
+      - name: subscription_active
+        sql: is_subscription_active
         type: boolean
-        description: The total number of Active customers       
+        description: the total number of active customers       

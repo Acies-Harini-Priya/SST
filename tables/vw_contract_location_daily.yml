@@ -1,159 +1,159 @@
 tables:
-  - name: VW_CONTRACT_LOCATION_DAILY
+  - name: vw_contract_location_daily
     sql: {{ load_sql('vw_contract_location_daily') }}
-    description: Table containing information about vw_contract_location_daily.
+    description: table containing information about vw_contract_location_daily.
     public: true
 
     joins:
       - name: currency_daily
         relationship: one_to_many
-        sql: "{TABLE.BILLING_CURRENCY_CODE} = {currency_daily.CURRENCY_CODE} AND 
-              {TABLE.DS} = {currency_daily.DS}"
+        sql: "{TABLE.billing_currency_code} = {currency_daily.currency_code} and 
+              {TABLE.ds} = {currency_daily.ds}"
 
-      - name: HS_PRODUCT_GROUPS
+      - name: hs_product_groups
         relationship: one_to_many
-        sql: "{TABLE.PRODUCT} = {HS_PRODUCT_GROUPS.SKU}"
+        sql: "{TABLE.product} = {hs_product_groups.sku}"
 
-      - name: SF_ACCOUNT_DAILY
+      - name: sf_account_daily
         relationship: one_to_many
-        sql: "{TABLE.LOCATION_ID} = {SF_ACCOUNT_DAILY.LOCATION_ID}"
+        sql: "{TABLE.location_id} = {sf_account_daily.location_id}"
 
-      - name: T_B2B_PACKAGE_STATUS
+      - name: t_b2b_package_status
         relationship: one_to_many
-        sql: "{TABLE.PRODUCT} = {T_B2B_PACKAGE_STATUS.PACKAGE_SKU} AND 
-              {TABLE.CONTRACT_NUMBER} = {T_B2B_PACKAGE_STATUS.CONTRACT_ID}"
+        sql: "{TABLE.product} = {t_b2b_package_status.package_sku} and 
+              {TABLE.contract_number} = {t_b2b_package_status.contract_id}"
 
-      - name: T_SUBSCRIPTION_STATUS
+      - name: t_subscription_status
         relationship: one_to_many
-        sql: "{T_SUBSCRIPTION_STATUS.ID} = {T_B2B_PACKAGE_STATUS.PACKAGE_STATUS_ID}"
+        sql: "{t_subscription_status.id} = {t_b2b_package_status.package_status_id}"
 
     dimensions:
-      - name: CONTRACT_NUMBER
+      - name: contract_number
         type: string
-        column: CONTRACT_NUMBER
-        description: "Contract number"
+        column: contract_number
+        description: "contract number"
 
-      - name: DAY_START_CONTRACT_STATUS
+      - name: day_start_contract_status
         type: string
-        column: DAY_START_CONTRACT_STATUS
-        description: "Contract status at the start of the day"
+        column: day_start_contract_status
+        description: "contract status at the start of the day"
 
-      - name: DAY_END_CONTRACT_STATUS
+      - name: day_end_contract_status
         type: string
-        column: DAY_END_CONTRACT_STATUS
-        description: "Contract status at the end of the day"
+        column: day_end_contract_status
+        description: "contract status at the end of the day"
 
-      - name: LOCATION_ID
+      - name: location_id
         type: string
-        column: LOCATION_ID
-        description: "Location ID"
+        column: location_id
+        description: "location id"
 
-      - name: PRODUCT
+      - name: product
         type: string
-        column: PRODUCT
-        description: "Product"
+        column: product
+        description: "product"
 
-      - name: PRODUCT_DESCRIPTION
+      - name: product_description
         type: string
-        column: PRODUCT_DESCRIPTION
-        description: "Description of the product"
+        column: product_description
+        description: "description of the product"
 
-      - name: BILLING_ACCOUNT_ID
+      - name: billing_account_id
         type: string
-        column: BILLING_ACCOUNT_ID
-        description: "Billing account ID"
+        column: billing_account_id
+        description: "billing account id"
 
-      - name: CHARGE_MODEL
+      - name: charge_model
         type: string
-        column: CHARGE_MODEL
-        description: "Charge model used"
+        column: charge_model
+        description: "charge model used"
 
-      - name: TERM_START_DATE
+      - name: term_start_date
         type: time
-        column: TERM_START_DATE
-        description: "Contract term start date"
+        column: term_start_date
+        description: "contract term start date"
 
-      - name: TERM_END_DATE
+      - name: term_end_date
         type: time
-        column: TERM_END_DATE
-        description: "Contract term end date"
+        column: term_end_date
+        description: "contract term end date"
 
-      - name: BILLING_CURRENCY_CODE
+      - name: billing_currency_code
         type: string
-        column: BILLING_CURRENCY_CODE
-        description: "Currency code for billing"
+        column: billing_currency_code
+        description: "currency code for billing"
 
-      - name: TERM_START
+      - name: term_start
         type: boolean
-        column: TERM_START
-        description: "Flag if it's the start of the term"
+        column: term_start
+        description: "flag if it's the start of the term"
 
-      - name: TERM_END
+      - name: term_end
         type: boolean
-        column: TERM_END
-        description: "Flag if it's the end of the term"
+        column: term_end
+        description: "flag if it's the end of the term"
 
-      - name: CONTRACT_FREE_TRIAL
+      - name: contract_free_trial
         type: boolean
-        column: CONTRACT_FREE_TRIAL
-        description: "Is the contract a free trial?"
+        column: contract_free_trial
+        description: "is the contract a free trial?"
 
-      - name: CALCULATED_LOCATIONS
+      - name: calculated_locations
         type: number
-        column: CALCULATED_LOCATIONS
-        description: "Number of locations calculated"
+        column: calculated_locations
+        description: "number of locations calculated"
 
-      - name: CALCULATED_STATUS
+      - name: calculated_status
         type: string
-        column: CALCULATED_STATUS
-        description: "Calculated contract status"
+        column: calculated_status
+        description: "calculated contract status"
 
-      - name: CONTRACT_BILLING_UNIT_NET_AMT_PER_LOCATION_USD
+      - name: contract_billing_unit_net_amt_per_location_usd
         type: number
-        column: CONTRACT_BILLING_UNIT_NET_AMT_PER_LOCATION_USD
-        description: "Net amount per billing unit per location in USD"
+        column: contract_billing_unit_net_amt_per_location_usd
+        description: "net amount per billing unit per location in usd"
 
-      - name: CAMPAIGNS
+      - name: campaigns
         type: string
-        column: CAMPAIGNS
-        description: "Campaign information"
+        column: campaigns
+        description: "campaign information"
 
-      - name: CONTRACT_START_DATE
+      - name: contract_start_date
         type: time
-        column: CONTRACT_START_DATE
-        description: "Start date of the contract"
+        column: contract_start_date
+        description: "start date of the contract"
 
-      - name: CANCELLATION_DS
+      - name: cancellation_ds
         type: time
-        column: CANCELLATION_DS
-        description: "Cancellation date"
+        column: cancellation_ds
+        description: "cancellation date"
 
-      - name: CANCELLATION_REASON
+      - name: cancellation_reason
         type: string
-        column: CANCELLATION_REASON
-        description: "Reason for cancellation"
+        column: cancellation_reason
+        description: "reason for cancellation"
 
-      - name: AUTO_RENEW
+      - name: auto_renew
         type: boolean
-        column: AUTO_RENEW
-        description: "Indicates auto-renewal"
+        column: auto_renew
+        description: "indicates auto-renewal"
 
-      - name: PLACE_TYPE
+      - name: place_type
         type: string
-        column: PLACE_TYPE
-        description: "Type of place"
+        column: place_type
+        description: "type of place"
 
-      - name: CONTINENT_NAME
+      - name: continent_name
         type: string
-        column: CONTINENT_NAME
-        description: "Continent"
+        column: continent_name
+        description: "continent"
 
-      - name: COUNTRY
+      - name: country
         type: string
-        column: COUNTRY
-        description: "Country"
+        column: country
+        description: "country"
 
-      - name: DS
+      - name: ds
         type: time
-        column: DS
-        description: "Date"
+        column: ds
+        description: "date"

@@ -1,4 +1,4 @@
-SELECT
+select
     currency_code ,
 	currency_name ,
 	country ,
@@ -7,5 +7,5 @@ SELECT
 	quarterly_currency_rate ,
 	yearly_currency_rate ,
 	ds 
-FROM
+from
     sstdepot.hs_sst.currency_daily

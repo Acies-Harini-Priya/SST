@@ -1,22 +1,22 @@
-SELECT
-    LOCATION_ID ,
-	PACKAGE_SKU ,
-	PACKAGE_STATUS_ID ,
-	CONTRACT_ID ,
-	CREATED_ON ,
-	CREATED_BY ,
-	UPDATED_ON ,
-	UPDATED_BY ,
-	SUBSCRIPTION_ID ,
-	EXTERNAL_ID ,
-	PLACE_TYPE ,
-	CONTRACT_NUMBER ,
-	BILLING_ACCOUNT_ID ,
-	DS ,
-	START_DATE ,
-	END_DATE ,
-	MRR ,
-	LAST_MODIFIED_DATE ,
-	PACKAGE_STATUS_NAME 
-FROM
-    dataos://sstdepot:HS_SST/T_B2B_PACKAGE_STATUS
+select
+    location_id ,
+	package_sku ,
+	package_status_id ,
+	contract_id ,
+	created_on ,
+	created_by ,
+	updated_on ,
+	updated_by ,
+	subscription_id ,
+	external_id ,
+	place_type ,
+	contract_number ,
+	billing_account_id ,
+	ds ,
+	start_date ,
+	end_date ,
+	mrr ,
+	last_modified_date ,
+	package_status_name 
+from
+    sstdepot.hs_sst.t_b2b_package_status
