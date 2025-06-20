@@ -18,7 +18,7 @@ tables:
     
       - name: CURRENCY_NAME
         type: string
-        column: CURRECNY_NAME
+        column: CURRENCY_NAME
         description: "name of the currency"
 
       - name: DAILY_CURRENCY_RATE
@@ -50,24 +50,24 @@ tables:
       - name: DISTINCT_CURRENCY_CODE
         sql: CURRENCY_CODE
         type: count_distinct 
-        description: Total distinct currency code
+        description: "Total distinct currency code"
 
       - name: DISTINCT_COUNTRY
         sql: COUNTRY
         type: count_distinct 
-        description: Toatl distinct country
+        description: "Total distinct country"
 
       - name: AVG_MONTHLY_CURRENCY_RATE
         sql: MONTHLY_CURRENCY_RATE
         type: avg 
-        description: Average Monthly currency rate
+        description: "Average Monthly currency rate"
       
       - name: AVG_QUARTERLY_CURRENCY_RATE
         sql: QUARTERLY_CURRENCY_RATE
         type: avg 
-        description: Average Quarterly currency rate
+        description: "Average Quarterly currency rate"
 
       - name: AVG_YEARLY_CURRENCY_RATE
         sql: YEARLY_CURRENCY_RATE
         type: avg 
-        description: Average yearly currency rate
+        description: "Average yearly currency rate"
