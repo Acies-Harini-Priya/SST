@@ -5,10 +5,10 @@ tables:
     public: true
 
     joins:
-      - name: CURRENCY_DAILY
+      - name: currency_daily
         relationship: one_to_many
-        sql: "{TABLE.BILLING_CURRENCY_CODE} = {CURRENCY_DAILY.CURRENCY_CODE} AND 
-              {TABLE.DS} = {CURRENCY_DAILY.DS}"
+        sql: "{TABLE.BILLING_CURRENCY_CODE} = {currency_daily.CURRENCY_CODE} AND 
+              {TABLE.DS} = {currency_daily.DS}"
 
       - name: HS_PRODUCT_GROUPS
         relationship: one_to_many
