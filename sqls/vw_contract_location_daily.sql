@@ -70,6 +70,5 @@ select
     continent_name,
     country,
     ds
-
 from 
     sstdepot.hs_sst.vw_contract_location_daily

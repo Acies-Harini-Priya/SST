@@ -111,16 +111,6 @@ tables:
         description: total monthly recurring revenue
 
       - name: total_contracts
-        sql: "count(distinct {contract_id})"
-        type: number
+        sql: contract_id
+        type: count_distinct
         description: number of unique contracts
-
-      - name: avg_mrr_per_account
-        sql: sum(mrr) / count(distinct billing_account_id)
-        type: number
-        description: average revenue per billing account, used for arpa (average revenue per account) metric
-
-      - name: active_package_count
-        sql: count(*) where package_status_name = 'active'
-        type: number
-        description: count of currently active packages
