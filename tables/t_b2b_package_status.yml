@@ -4,18 +4,23 @@ tables:
     description: gives the status of the package
     public: true 
 
+    joins:
+      - name: t_subscription_status
+        relationship: one_to_many
+        sql: "{TABLE.package_status_id} = {t_subscription_status.id}"
+        
     dimensions:
       - name: billing_account_id
         type: number
         column: billing_account_id
         description: "id"
         
-
       - name: contract_id
         type: string
         column: contract_id
         description: "id"
         primary_key: true
+        public: true
 
       - name: contract_number
         type: string
@@ -68,6 +73,7 @@ tables:
         column: package_sku
         description: "unique identifier  for package"
         primary_key: true
+        public: true
       
       - name: package_status_id
         type: number
